@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-sqg+_tz6n0&(a0s)=rv*wt3t4x_@8%j%9dvrzupce+pb0ga-@d"
+SECRET_KEY = "django-insecure-x^q&^orx759^gsduwb!shyo6u%mng1ib%28kod^k=&2l5j+fd("
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "djongo",
     "corsheaders",
     "octofit_tracker",
 ]
@@ -52,7 +53,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
 
 ROOT_URLCONF = "octofit_tracker.urls"
 
@@ -128,16 +128,5 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Enable CORS
+# Allow all origins for CORS
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "PUT",
-    "PATCH",
-    "DELETE",
-    "OPTIONS",
-]
-CORS_ALLOW_HEADERS = [
-    "*",
-]
